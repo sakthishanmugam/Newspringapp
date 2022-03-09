@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Newspringapp
+  name: Newspringapp-deployment
 spec:
   replicas: 1
   selector:
@@ -13,11 +13,11 @@ spec:
         app: Newspring-app
     spec:
       containers:
-      - name: Newspringapp
-        image: 211223789150.dkr.ecr.us-east-2.amazonaws.com/my-springboot-app
+      - name: Newspringapp-deployment
+        image: sakthi120498/springbootlatest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8085
+        - containerPort: 8080
           name: http
           protocol: TCP
 # service type loadbalancer       
@@ -25,13 +25,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Newspringapp
+  name: New-springapp
 spec:
   ports:
   - name: http
-    port: 80
+    port: 8080
     protocol: TCP
-    targetPort: 8085
+    targetPort: 8080
   type: LoadBalancer
   selector:
     app: Newspring-app
