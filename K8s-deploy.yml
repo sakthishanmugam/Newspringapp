@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: Newspringapp-deployment
-        image: public.ecr.aws/n0o1i7t6/sakthi-new
+        image: public.ecr.aws/n0o1i7t6/sakthi-new:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
