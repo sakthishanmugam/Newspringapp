@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: newspringapp-deployment
   labels:
-  app:newspringapp-deployment
+  app: newspringapp-deployment
 spec:
   replicas: 1
   selector:
