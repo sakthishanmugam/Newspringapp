@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Newspringapp-deployment
+  name: newspringapp-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Newspring-app
+      app: newspring-app
   template:
     metadata:
       labels:
-        app: Newspring-app
+        app: newspring-app
     spec:
       containers:
-        - name: Newspringapp-deployment
+        - name: newspringapp-deployment
           image: public.ecr.aws/n0o1i7t6/sakthi-new:latest
           imagePullPolicy: Always
           ports:
@@ -27,7 +27,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: New-springapp
+  name: new-springapp
 spec:
   ports:
   - name: http
@@ -36,4 +36,4 @@ spec:
     targetPort: 8080
   type: LoadBalancer
   selector:
-    app: Newspring-app
+    app: newspring-app
