@@ -13,13 +13,14 @@ spec:
         app: Newspring-app
     spec:
       containers:
-      - name: Newspringapp-deployment
-        image: public.ecr.aws/n0o1i7t6/sakthi-new:latest
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
-          name: http
-          protocol: TCP
+        - name: Newspringapp-deployment
+          image: public.ecr.aws/n0o1i7t6/sakthi-new:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PORT
+              value: "8080"
 # service type loadbalancer       
 ---
 apiVersion: v1
