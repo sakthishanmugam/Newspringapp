@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: newspringapp-deployment
+  labels:
+  app:newspringapp-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: newspring-app
+      app: newspringapp-deployment
   template:
     metadata:
       labels:
-        app: newspring-app
-  containers:
+        app: newspringapp-deployment
+    spec:
+      containers:
         - name: newspringapp-deployment
           image: public.ecr.aws/n0o1i7t6/sakthi-new:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          env:
-            - name: PORT
-              value: "8080"
               
