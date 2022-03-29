@@ -19,5 +19,5 @@ spec:
           image: public.ecr.aws/q0r5o2b3/new_job:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 9090
 
