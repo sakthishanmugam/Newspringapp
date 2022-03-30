@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name:  newspringapp-deploy
   labels:
-    app: deploy
+    app: newspringapp-deploy
 spec:
   replicas: 1
   selector:
@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: newsprinapp-deploy
+        app: newspringapp-deploy
     spec:
       containers:
         - name: newspringapp-deploy
