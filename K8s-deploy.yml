@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: newspringapp-deployment
-          image: public.ecr.aws/q0r5o2b3/new_job:latest
+          image: public.ecr.aws/q0r5o2b3/new_job:job
           imagePullPolicy: Always
           ports:
             - containerPort:  8080
