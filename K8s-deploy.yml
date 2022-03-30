@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  deploy
+  name:  newspringapp-deploy
   labels:
     app: deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: deploy
+      app: newspringapp-deploy
   template:
     metadata:
       labels:
-        app: deploy
+        app: newsprinapp-deploy
     spec:
       containers:
         - name: newspringapp-deploy
