@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  newspringapp-deployment
+  name:  deploy
   labels:
-    app: newspringapp-deployment
+    app: deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: newspringapp-deployment
+      app: deploy
   template:
     metadata:
       labels:
-        app: newspringapp-deployment
+        app: deploy
     spec:
       containers:
-        - name: newspringapp-deployment
+        - name: newspringapp-deploy
           image: public.ecr.aws/q0r5o2b3/new_job:latest
           imagePullPolicy: Always
           ports:
