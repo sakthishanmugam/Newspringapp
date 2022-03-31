@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: springapp
   labels:
-    
     app: springapp
 spec:
   replicas: 2
