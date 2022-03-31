@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name:  newspringapp
   labels:
-    track: canary
+    
     app: newspringapp
 spec:
   replicas: 1
