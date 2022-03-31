@@ -7,7 +7,7 @@ spec:
   - name: http
     port: 8080
     protocol: TCP
-    targetPort: 8080
+    targetPort: 80
   type: LoadBalancer
   selector:
     app: newspringapp-deployment
