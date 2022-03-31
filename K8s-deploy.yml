@@ -19,4 +19,4 @@ spec:
           image: public.ecr.aws/q0r5o2b3/k8s-deploy:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8090
+            - containerPort: 8080
