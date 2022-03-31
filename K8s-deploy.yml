@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: spring
   labels:
-    app: spring
+    app: my-application
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: spring
+      app: my-application
   template:
     metadata:
       labels:
-        app: spring
+        app: my-application
     spec:
       containers:
-        - name: spring
+        - name: my-application
           image: public.ecr.aws/q0r5o2b3/k8s-deploy:latest
           imagePullPolicy: Always
           ports:
