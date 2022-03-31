@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nnewspringapp-deployment
+  name: newspringapp-deployment
 spec:
   ports:
   - name: http
