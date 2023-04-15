@@ -5,7 +5,7 @@ metadata:
   labels:
     app: my-application
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: my-application
@@ -19,4 +19,4 @@ spec:
           image: k8s-deploy:latest public.ecr.aws/p5c8a2k9/k8s-deploy:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8090
+            - containerPort: 8080
