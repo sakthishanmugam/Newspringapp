@@ -5,9 +5,9 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 3306
+    port: 8080
     protocol: TCP
-    targetPort: 3306
+    targetPort: 8080
   type: LoadBalancer
   selector:
     app: springapplication
