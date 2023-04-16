@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-application
+  name: springapplication
   labels:
-    app: my-application
+    app: springapplication
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: my-application
+      app: springapplication
   template:
     metadata:
       labels:
-        app: my-application
+        app: springapplication
     spec:
       containers:
-        - name: my-application
+        - name: springapplication
           image: k8s-deploy:latest public.ecr.aws/p5c8a2k9/k8s-deploy:latest
           imagePullPolicy: Always
           ports:
