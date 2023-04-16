@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: springapplication
@@ -19,5 +19,5 @@ spec:
           image: k8s-deploy:latest public.ecr.aws/p5c8a2k9/k8s-deploy:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 3306
+            - containerPort: 8080
           
